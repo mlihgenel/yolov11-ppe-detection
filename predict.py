@@ -30,8 +30,8 @@ import matplotlib.pyplot as plt
 import os
 import cv2
 
-# Tahminlerin kaydedildiği klasör
-pred_dir = "images/predictions/ppe_img_test"
+# Tahminlerin kaydedildiği klasör (ultralytics her çalıştırmada farklı klasör oluşturabilir)
+pred_dir = str(results[0].save_dir)
 
 # Klasördeki resimleri listele
 image_files = [os.path.join(pred_dir, f) for f in os.listdir(pred_dir) if f.endswith((".jpg", ".png"))]
